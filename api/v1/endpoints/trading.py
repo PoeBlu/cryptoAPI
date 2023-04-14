@@ -11,5 +11,4 @@ async def get_trading_signals(crypto: str):
     * if bearish, prices are expected to fall - pessimistic """
     r = requests.get(f"https://min-api.cryptocompare.com/data/tradingsignals/intotheblock/latest?fsym={crypto}")
     data = r.json()
-    trading_signals = data['Data']
-    return trading_signals
+    return data['Data']
